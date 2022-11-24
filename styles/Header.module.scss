@@ -1,4 +1,4 @@
-#home {
+.home {
     position: static;
     background: url("../public/assets/bgIMG.png");
     background-size: cover;
@@ -27,7 +27,6 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-
     padding: 0.5rem;
   
     @media screen and (min-width: 2000px) {
@@ -94,10 +93,6 @@
   }
 
 
-
-
-
-  
   // .app__header-info {
   //   flex: 0.65;
   //   display: flex;

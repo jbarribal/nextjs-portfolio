@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 const Header = () => {
   return (
-<div id='home'>
+<div id= 'home' className={styles.home}>
       <div className={styles.app__header}>
         <div>
           <p className={styles.small_text}>

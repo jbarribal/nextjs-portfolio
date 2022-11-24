@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar'
-import Header from '../components/Header'
+import { Navbar, About, Header, Work, Skills} from '../components'
+
 
 export default function Home() {
   return (
-    <div>
+    <div className='app'>
       <Navbar />
       <Header />
+      <About />
+      <Work />
+      <Skills />
     </div>
   )
 }
