@@ -20,15 +20,15 @@ const Skills = () => {
     
         client.fetch(skillsQuery).then((data) => {
           setSkills(data);
-        });
+        }); 
       }, []);
 
 
   return (
-    <div className={`${styles.app__skills} app__container app__wrapper app__whitebg skills`}>
+    <div className={`${styles.app__skills} app__container app__wrapper app__flex app__whitebg`}>
         <h2 className="head-text">Skills & Experiences</h2>
 
-        <div className={styles.app__skills_container}>
+        <div className={`${styles.app__skills_container}`}>
             <motion.div className={styles.app__skills_list}>
                 {skills.map((skill) => (
                 <motion.div

@@ -19,7 +19,7 @@ const Work = () => {
 
 
   return (
-    <div className={`${styles.app__works} app__container app__wrapper app__primarybg work`}>
+    <div className={`${styles.app__works} app__container app__wrapper app__flex app__primarybg work`}>
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
 
 
