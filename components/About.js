@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-// import { AppWrap, MotionWrap } from '../../wrapper';
 import styles from '../styles/About.module.scss'
 import { urlFor, client } from '../client'
 
@@ -18,8 +17,8 @@ const About = () => {
   }, []);
 
   return (
-    <div className={`${styles.app_about} app__container app__wrapper`}>
-      <h2 className='head-text'>I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
+    <div id='about' className={`${styles.app_about} app__flex app__container app__wrapper`}>
+      <h2 className='head-text'>Building the <span>Future</span> with Tech <br />Making Challenges  <span>Possible</span></h2>
       <div className= {styles.app__profiles}>
         {abouts.map((about, index) => (
           <motion.div
@@ -29,7 +28,7 @@ const About = () => {
             className={styles.app__profile_item}
             key={about.title + index}
           >
-            <Image src={abouts.imgUrl} alt={abouts.title}/>
+            <img src ={urlFor(about.imgUrl)} alt={about.title}/> 
             <h2 className="bold-text" style={{ marginTop: 20 }}>{about.title}</h2>
             <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
@@ -40,9 +39,3 @@ const About = () => {
 }
 
 export default About
-
-// export default AppWrap(
-//   MotionWrap(About, 'app__about'),
-//   'about',
-//   'app__whitebg',
-// );

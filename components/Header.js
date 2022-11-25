@@ -24,7 +24,7 @@ const Header = () => {
           </p>
           <div className={styles.app__header_links}>
             <a
-              href='https://www.linkedin.com/in/clint-briley-50056920a/'
+              href='https://www.linkedin.com/in/joshua-barribal-22044221a/'
               target='_blank'
               rel='noreferrer'
             >
@@ -33,7 +33,7 @@ const Header = () => {
               </div>
             </a>
             <a
-              href='https://github.com/fireclint'
+              href='https://github.com/jbarribal'
               target='_blank'
               rel='noreferrer'
             >
@@ -41,7 +41,7 @@ const Header = () => {
                 <FaGithub />
               </div>
             </a>
-            <Link href='/#contact'>
+            <Link href='#contact'>
               <div className={styles.app__header_logo}>
                 <AiOutlineMail />
               </div>

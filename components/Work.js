@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { AiFillEye, AiFillGithub } from 'react-icons/ai'
 import { motion } from 'framer-motion'
-import { client } from '../client'
+import { urlFor, client } from '../client'
 import styles from '../styles/Work.module.scss'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Work = () => {
@@ -19,11 +18,8 @@ const Work = () => {
 
 
   return (
-    <div className={`${styles.app__works} app__container app__wrapper app__flex app__primarybg work`}>
+    <div id='work' className={`${styles.app__works} app__container app__wrapper app__primarybg`}>
       <h2 className="head-text">My Creative <span>Portfolio</span> Section</h2>
-
-
-
     <motion.div
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className={styles.app__work_portfolio}
@@ -31,14 +27,14 @@ const Work = () => {
     {works.map((work, index) => (
       <div className={`${styles.app__work_item} app__flex`} key={index}>
         <div className={`${styles.app__work_img} app__flex`}>
-          <Image src= {work.imgUrl} alt={work.name}/>
+          <img src= {urlFor(work.imgUrl)} alt={work.name}/>
 
           <motion.div
           whileHover={{ opacity: [0, 1] }}
           transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
           className={`${styles.app__work_hover} app__flex`}
           >
-            <Link href='#'> 
+            <Link href={work.projectLink}> 
 
               <motion.div
                 whileInView={{ scale: [0, 1] }}
@@ -51,7 +47,7 @@ const Work = () => {
 
               </motion.div>
             </Link>
-            <Link href='#'>
+            <Link href={work.codeLink}>
 
               <motion.div
                   whileInView={{ scale: [0, 1] }}

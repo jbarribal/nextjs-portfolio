@@ -1,6 +1,6 @@
 import React , { useState, useEffect } from 'react'
 import styles from '../styles/Skills.module.scss'
-import { client } from '../client'
+import { urlFor, client } from '../client'
 import { motion } from 'framer-motion'
 import ReactTooltip from 'react-tooltip';
 
@@ -25,7 +25,7 @@ const Skills = () => {
 
 
   return (
-    <div className={`${styles.app__skills} app__container app__wrapper app__flex app__whitebg`}>
+    <div id='skills' className={`${styles.app__skills} app__container app__wrapper app__flex app__whitebg`}>
         <h2 className="head-text">Skills & Experiences</h2>
 
         <div className={`${styles.app__skills_container}`}>
@@ -38,10 +38,10 @@ const Skills = () => {
                     key={skill.name}
                 >
                     <div
-                    className="app__flex"
+                    className={`${styles.app__skills_itemicon} app__flex`}
                     style={{ backgroundColor: skill.bgColor }}
                     >
-                    <img src={skill.icon} alt={skill.name} />
+                    <img src={urlFor(skill.icon)}alt={skill.name} />
                     </div>
                     <p className="p-text">{skill.name}</p>
                 </motion.div>
