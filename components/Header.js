@@ -46,7 +46,7 @@ const Header = () => {
                 <AiOutlineMail />
               </div>
             </Link>
-            <Link href='https://drive.google.com/file/d/1z394DBTa8DWKnB3r3bY2b9MhOdEh8YuZ/view?usp=sharing' className={styles.app__header_logo}>
+            <Link href='#' className={styles.app__header_logo}>
               <div>
                 <BsFillPersonLinesFill />
               </div>
